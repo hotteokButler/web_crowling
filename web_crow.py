@@ -1,9 +1,10 @@
 
 # crowling
-import random
-import time
 import requests
 from bs4 import BeautifulSoup
+
+import random
+import time
 
 # 파일 입출력
 import sys
@@ -85,7 +86,7 @@ for search_word in search_words:
     if rank < 10 * how_many_page: 
         print(' <{}> 검색결과 {}번째로 조회됩니다.(전체 홈페이지 {} 중 {}위)'.format(search_word, rank, total, rank ))
     else: 
-        print(' <{}> 검색시 {}위 내에 찾을 수 없습니다.(전체 홈페이지 {})'.format(search_word, 10 * how_many_page, total))
+        print(' <{}> 검색시 {}위 내에 찾을 수 없습니다.(전체 홈페이지 {})'.format(search_word, 15 * how_many_page, total))
         
     print('\n\n')
     
