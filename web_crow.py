@@ -62,7 +62,11 @@ search_words = ['키워드']
 
 target_url = '내홈피.kr'  # 홈페이지 주소 protocol 제거 후 도메인만 입력
 
-sys.stdout = open('./output_.txt','w') # 같은파일 덮어씀
+original_stdout = sys.stdout 
+
+f = open('./output_.txt','w') # 같은파일 덮어씀
+
+sys.stdout = f
 
 for search_word in search_words:
     rank = 0
@@ -91,6 +95,9 @@ for search_word in search_words:
     print('\n\n')
     
     
-sys.stdout.close()
+f.close()
+
+sys.stdout = original_stdout 
 
 print('완료')
+
